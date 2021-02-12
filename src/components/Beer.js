@@ -14,9 +14,9 @@ function Beer(props) {
 Beer.propTypes = {
   name: PropTypes.string,
   brand: PropTypes.string,
-  alcoholContent: PropTypes.string,
-  price: PropTypes.string,
-  quantity: PropTypes.string,
+  alcoholContent: PropTypes.number,
+  price: PropTypes.number,
+  quantity: PropTypes.number,
   id: PropTypes.string,
 };
 

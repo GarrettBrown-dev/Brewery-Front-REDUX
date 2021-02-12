@@ -14,7 +14,7 @@ function ReusableForm(props) {
           name='brand'
           placeholder='Brand' />
         <input
-          type='text' //kept as text due to difficulties with datatypes.
+          type='number'
           name='alcoholContent'
           placeholder='Alcohol Content' />
         <input
@@ -22,7 +22,7 @@ function ReusableForm(props) {
           name='price'
           placeholder='Price' />
         <input
-          type='number'
+          type='number' min="0" max="124"
           name='quantity'
           placeholder='Quantity' />
         <button type='submit'>{props.buttonText}</button>
