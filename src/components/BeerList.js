@@ -1,0 +1,27 @@
+import React from 'react';
+import Beer from './Beer';
+import PropTypes from 'prop-types';
+
+function BeerList(props) {
+  return (
+    <>
+      <hr />
+      <Beer
+        whenBeerClicked={props.onBeerSelection}
+        name={beer.name}
+        brand={beer.brand}
+        alcoholContent={beer.alcoholContent}
+        price={beer.price}
+        quantity={beer.quantity}
+        id={beer.id}
+        key={beer.id} />
+    </>
+  );
+}
+
+BeerList.propTypes = {
+  beerList: PropTypes.array,
+  onBeerSelection: PropTypes.func,
+};
+
+export default BeerList;
