@@ -5,7 +5,7 @@ function Beer(props) {
   return (
     <>
       <div onClick={() => props.whenBeerClicked(props.id)}>
-        <p>props.name</p>
+        <p>{props.name}</p>
       </div>
     </>
   );

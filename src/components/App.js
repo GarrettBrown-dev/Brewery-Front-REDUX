@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Beer from './Beer';
-import './App.css';
+import BeerControl from './BeerControl';
 
 function App() {
   return (

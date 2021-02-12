@@ -6,15 +6,17 @@ function BeerList(props) {
   return (
     <>
       <hr />
-      <Beer
-        whenBeerClicked={props.onBeerSelection}
-        name={beer.name}
-        brand={beer.brand}
-        alcoholContent={beer.alcoholContent}
-        price={beer.price}
-        quantity={beer.quantity}
-        id={beer.id}
-        key={beer.id} />
+      {props.beerList.map((beer) =>
+        <Beer
+          whenBeerClicked={props.onBeerSelection}
+          name={beer.name}
+          brand={beer.brand}
+          alcoholContent={beer.alcoholContent}
+          price={beer.price}
+          quantity={beer.quantity}
+          id={beer.id}
+          key={beer.id} />
+      )}
     </>
   );
 }
