@@ -72,6 +72,45 @@ class BeerControl extends React.Component {
         formVisibleOnPage: !prevState.formVisibleOnPage
       }));
     }
+  }
 
 
+  render() {
+    let currentlyVisibleState = null;
+    let buttonText = null;
+    if (this.state.editing) {
+      currentlyVisibleState =
+        <EditBeerForm
+          beer={this.state.selectedBeer}
+          onEditBeer={this.handleEditingBeerInList} />
+      buttonText = "Return to Beer List";
+    } else if (this.state.selectedBeer != null) {
+      currentlyVisibleState =
+        <BeerDetail
+          beer={this.state.selectedBeer}
+          onClickingDelete={this.handleDeletingBeer}
+          onClickingEdit={this.handleEditClick}
+          onClickingPurchase={this.handlePurchasingBeerInlist}
+        />
+      buttonText = "Return to Beer List";
+    } else if (this.state.formVisibleOnPage) {
+      currentlyVisibleState = <NewBeerForm
+        onNewBeerCreation={this.handleAddingNewBeerToList}
+        onEditBeer={this.handleEditingBeerInList} />
+      buttonText = "Return to Beer List";
+    } else {
+      currentlyVisibleState = <BeerList
+        beerList={this.state.masterBeerList}
+        onBeerSelection={this.handleChangingSelectedBeer} />;
+      buttonText = "Add Beer";
+    }
+    return (
+      <>
+        {currentlyVisibleState}
+        <button onClick={this.handleClick}>{buttonText}</button>
+      </>
+    )
+  }
+}
 
+export default BeerControl;
