@@ -1,3 +1,15 @@
+# Brewery-Front
+
+### "React State and Basic App for Epicodus Code-Review 2.12.21"
+
+#### by Garrett Brown
+
+## Description
+
+A basic webpage created with React. Allows user to add a keg of beer with a name, brand, alcohol content, price, and quantity.
+
+<img src="./img/Icon.png" alt="Component Diagram"/>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -39,32 +51,29 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+# 🪲 Bugs / Issues
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* None currently to note
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# ☎️ Support / Contact Details
 
-### Code Splitting
+* Please feel free to reach out to <gman9mm@live.com>, 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# ⚙️ Technologies Used
 
-### Analyzing the Bundle Size
+<details>
+  <summary>Expand Tech/tools</summary>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* [Bootstrap Components](https://getbootstrap.com/docs/3.3/components/)
+* Javascript
+* React
+* CSS
+* Node.js
 
-### Making a Progressive Web App
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# ©️ License & Copyright
 
-### Advanced Configuration
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Copyright (c) 2021 **_Garrett Brown_** 
