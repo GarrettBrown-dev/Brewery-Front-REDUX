@@ -8,7 +8,7 @@
 
 A basic webpage created with React. Allows user to add a keg of beer with a name, brand, alcohol content, price, and quantity.
 
-<img src="./img/Icon.png" alt="Component Diagram"/>
+<img src="./img/BreweryFlowchart.jpg" alt="Component Diagram"/>
 
 # Getting Started with Create React App
 
