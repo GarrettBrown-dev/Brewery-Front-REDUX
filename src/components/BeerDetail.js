@@ -3,6 +3,15 @@ import PropTypes from 'prop-types';
 
 function BeerDetail(props) {
   const { beer, onClickingDelete, onClickingPurchase } = props;
+  let purchaseButton;
+  let quantity;
+  if (beer.quantity !== 0) {
+    quantity = <h4>{beer.quantity}</h4>;
+    purchaseButton = <button onClick={() => onClickingPurchase(false)}>Sell Beer</button>;
+  } else {
+    quantity = <h4><strong>Beer out of stock</strong></h4>;
+  };
+
   return (
     <React.Fragment>
       <h1>Beer Details:</h1>
@@ -12,6 +21,8 @@ function BeerDetail(props) {
       <p>{beer.alcoholContent}</p>
       <p>{beer.price}</p>
       <p>{beer.quantity}</p>
+      {quantity}
+      {purchaseButton}
       <button onClick={() => onClickingPurchase()}>Purchase</button>
       <button onClick={props.onClickingEdit}>Update Item</button>
       <button onClick={() => onClickingDelete(beer.id)}>Delete</button>
