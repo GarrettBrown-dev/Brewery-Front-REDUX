@@ -43,7 +43,7 @@ describe('beerListReducer', () => {
       brand: brand,
       alcoholContent: alcoholContent,
       price: price,
-      quantiy: quantity,
+      quantity: quantity,
       id: id,
     };
 
