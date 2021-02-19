@@ -1,12 +1,12 @@
-# Brewery-Front
+# Brewery-Front-Redux
 
-### "React State and Basic App for Epicodus Code-Review 2.19.21"
+### "React Redux-Revision for Epicodus Code-Review 2.19.21"
 
 #### by Garrett Brown
 
 ## Description
 
-A basic webpage created with React. Allows user to add a keg of beer with a name, brand, alcohol content, price, and quantity.
+A re-implementation of the Brewery-Front Site with Redux replacing instances of state for cleaner code.
 
 <img src="./src/img/BreweryFlowchart.jpg" alt="Component Diagram"/>
 
@@ -16,7 +16,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Be sure to paste these in your terminal in order to install the proper dependencies!
 
--(If you're creating a new project: npx create-react-app (project name here, no parens.)
+-If you're creating a new project: npx create-react-app (project name here, no parens.)
+NOTE: CREATE REACT-APP ADDS THE FOLLOWING SCRIPT: "test": "react-scripts test" IF YOU DO NOT CLONE OR USE THE ABOVE COMMAND, YOU MUST ADD THE SCRIPT TO YOUR package.json FILE MANUALLY.
 
 -npm install --save-exact react-scripts@3.2.0
 
@@ -41,6 +42,11 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run eject`
 
@@ -70,6 +76,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 * React
 * CSS
 * Node.js
+* Redux
 * https://www.draw.io/ (used for diagram.)
 
 </details>
