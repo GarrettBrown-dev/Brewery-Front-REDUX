@@ -3,14 +3,14 @@ import NewBeerForm from './NewBeerForm';
 import BeerList from './BeerList';
 import BeerDetail from './BeerDetail';
 import EditBeerForm from './EditBeerForm';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class BeerControl extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false,
-      masterBeerList: [],
       selectedBeer: null,
       editing: false
     };
@@ -111,6 +111,18 @@ class BeerControl extends React.Component {
         <button onClick={this.handleClick}>{buttonText}</button>
       </>
     )
+  }
+}
+
+BeerControl.PropTypes = {
+  masterBeerList: PropTypes.object,
+  formVisibleOnPage: PropTypes.bool
+};
+
+const mapStateToProps = state => {
+  return {
+    masterBeerList: state.masterBeerList,
+    formVisibleOnPage: state.formVisibleOnPage
   }
 }
 
