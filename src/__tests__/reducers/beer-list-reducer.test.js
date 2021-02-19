@@ -32,6 +32,6 @@ describe('beerListReducer', () => {
   }
 
   test('Should return default state if there is no action type passed into reducer', () => {
-    expect(ticketListReducer({}, { type: null })).toEqual({});
+    expect(beerListReducer({}, { type: null })).toEqual({});
   });
 })
