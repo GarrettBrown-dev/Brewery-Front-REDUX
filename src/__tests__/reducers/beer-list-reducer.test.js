@@ -58,4 +58,21 @@ describe('beerListReducer', () => {
       }
     });
   });
+
+  test('Should successfully delete a beer', () => {
+    action = {
+      type: 'DELETE_BEER',
+      id: 1
+    };
+    expect(beerListReducer(currentState, action)).toEqual({
+      2: {
+        name: 'TripleDuster',
+        brand: 'Duster',
+        alcoholContent: 8,
+        price: 5,
+        quantity: 10,
+        id: 2
+      }
+    });
+  })
 })
