@@ -10,16 +10,11 @@ function NewBeerForm(props) {
     props.onNewBeerCreation({
       name: event.target.name.value,
       brand: event.target.brand.value,
-      alcoholContent: event.target.alcoholContent.value,
-      price: event.target.price.value,
-      quantity: event.target.quantity.value,
+      alcoholContent: parseInt(event.target.alcoholContent.value),
+      price: parseInt(event.target.price.value),
+      quantity: parseInt(event.target.quantity.value),
       id: v4()
     });
-    console.log(event.target.name.value);
-    console.log(event.target.brand.value);
-    console.log(event.target.alcoholContent.value);
-    console.log(event.target.price.value);
-    console.log(event.target.quantity.value);
   }
 
   return (

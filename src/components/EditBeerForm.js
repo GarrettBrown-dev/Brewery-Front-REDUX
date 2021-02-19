@@ -7,12 +7,7 @@ function EditBeerForm(props) {
 
   function handleEditBeerFormSubmission(event) {
     event.preventDefault();
-    props.onEditBeer({ name: event.target.name.value, brand: event.target.brand.value, alcoholContent: event.target.alcoholContent.value, price: event.target.price.value, quantity: parseInt(event.target.quantity.value), id: beer.id });
-    console.log(event.target.name.value);
-    console.log(event.target.brand.value);
-    console.log(event.target.alcoholContent.value);
-    console.log(event.target.price.value);
-    console.log(event.target.quantity.value);
+    props.onEditBeer({ name: event.target.name.value, brand: event.target.brand.value, alcoholContent: parseInt(event.target.alcoholContent.value), price: parseInt(event.target.price.value), quantity: parseInt(event.target.quantity.value), id: beer.id });
   }
 
   return (

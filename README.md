@@ -1,6 +1,6 @@
 # Brewery-Front
 
-### "React State and Basic App for Epicodus Code-Review 2.12.21"
+### "React State and Basic App for Epicodus Code-Review 2.19.21"
 
 #### by Garrett Brown
 
@@ -8,11 +8,17 @@
 
 A basic webpage created with React. Allows user to add a keg of beer with a name, brand, alcohol content, price, and quantity.
 
-<img src="./img/BreweryFlowchart.jpg" alt="Component Diagram"/>
+<img src="./src/img/BreweryFlowchart.jpg" alt="Component Diagram"/>
 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Be sure to paste these in your terminal in order to install the proper dependencies!
+
+-(If you're creating a new project: npx create-react-app (project name here, no parens.)
+
+-npm install --save-exact react-scripts@3.2.0
 
 ## Available Scripts
 
@@ -64,6 +70,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 * React
 * CSS
 * Node.js
+* https://www.draw.io/ (used for diagram.)
 
 </details>
 
