@@ -126,4 +126,6 @@ const mapStateToProps = state => {
   }
 }
 
+BeerControl = connect(mapStateToProps)(BeerControl);
+
 export default BeerControl;
