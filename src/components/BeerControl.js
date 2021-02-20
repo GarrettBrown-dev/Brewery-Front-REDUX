@@ -17,8 +17,11 @@ class BeerControl extends React.Component {
   }
 
   handleAddingNewBeerToList = (newBeer) => {
-    const newMasterBeerList = this.state.masterBeerList.concat(newBeer);
-    this.setState({ masterBeerList: newMasterBeerList, formVisibleOnPage: false });
+    const { dispatch } = this.props;
+    const action = a.addBeer(newBeer);
+    dispatch(action);
+    const action2 = a.toggleForm();
+    dispatch(action2);
   }
 
   handleChangingSelectedBeer = (id) => {
@@ -64,14 +67,13 @@ class BeerControl extends React.Component {
   handleClick = () => {
     if (this.state.selectedBeer != null) {
       this.setState({
-        formVisibleOnPage: false,
         selectedBeer: null,
         editing: false
       });
     } else {
-      this.setState(prevState => ({
-        formVisibleOnPage: !prevState.formVisibleOnPage
-      }));
+      const { dispatch } = this.props;
+      const action = a.toggleForm();
+      dispatch(action);
     }
   }
 
