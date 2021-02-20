@@ -1,5 +1,3 @@
-import * as c from './../actions/ActionTypes';
-
 export default (state = {}, action) => {
   const { name, brand, alcoholContent, price, quantity, id } = action;
   switch (action.type) {
@@ -14,6 +12,11 @@ export default (state = {}, action) => {
           id: id
         }
       });
+    case 'DELETE_BEER':
+      let newState = { ...state };
+      delete newState[id];
+      return newState
+    default:
+      return state;
   }
-  return state;
-}
+};
