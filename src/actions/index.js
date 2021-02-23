@@ -4,18 +4,12 @@ export const toggleForm = () => ({
 
 export const deleteBeer = id => ({
   type: 'DELETE_BEER',
-  id
+  payload: {
+    id
+  }
 });
 
-export const addBeer = (beer) => {
-  const { name, brand, alcoholContent, price, quantity, id } = beer;
-  return {
-    type: 'ADD_BEER',
-    name: name,
-    brand: brand,
-    alcoholContent: alcoholContent,
-    price: price,
-    quantity: quantity,
-    id: id
-  }
-}
+export const addBeer = beer => ({
+  type: 'ADD_BEER',
+  payload: beer // is already an object
+});

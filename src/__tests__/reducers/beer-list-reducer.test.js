@@ -1,8 +1,13 @@
 import beerListReducer from '../../reducers/beer-list-reducer';
+import { addBeer, deleteBeer } from '../../actions/';
+
+
+export const initialState = {
+  masterBeerList: [],
+  paymaster: 'Garret'
+};
 
 describe('beerListReducer', () => {
-
-  let action;
   const beerInfo = {
     name: 'DungleDuster',
     brand: 'Duster',
@@ -11,68 +16,41 @@ describe('beerListReducer', () => {
     quantity: 5,
     id: 1
   };
+  const beerInfo2 = {
+    name: 'TripleDuster',
+    brand: 'Duster',
+    alcoholContent: 8,
+    price: 5,
+    quantity: 10,
+    id: 2
+  };
 
-  const currentState = {
-    1: {
-      name: 'DungleDuster',
-      brand: 'Duster',
-      alcoholContent: 5,
-      price: 5,
-      quantity: 5,
-      id: 1
-    },
-    2: {
-      name: 'TripleDuster',
-      brand: 'Duster',
-      alcoholContent: 8,
-      price: 5,
-      quantity: 10,
-      id: 2
-    }
-  }
+
+  const testBeerArray = [
+    beerInfo, beerInfo2
+  ];
 
   test('Should return default state if there is no action type passed into reducer', () => {
-    expect(beerListReducer({}, { type: null })).toEqual({});
+    expect(beerListReducer(initialState, { type: null })).toEqual(initialState);
   });
 
-  test('Should successfully add new beer to masterBeerList', () => {
-    const { name, brand, alcoholContent, price, quantity, id } = beerInfo;
-    action = {
-      type: 'ADD_BEER',
-      name: name,
-      brand: brand,
-      alcoholContent: alcoholContent,
-      price: price,
-      quantity: quantity,
-      id: id,
-    };
 
-    expect(beerListReducer({}, action)).toEqual({
-      [id]: {
-        name: name,
-        brand: brand,
-        alcoholContent: alcoholContent,
-        price: price,
-        quantity: quantity,
-        id: id
-      }
+  test('Should successfully add new beer to masterBeerList', () => {
+    const testAction = addBeer(beerInfo);
+
+    expect(beerListReducer(initialState, testAction)).toEqual({
+      ...initialState,
+      masterBeerList: [beerInfo]
     });
   });
 
   test('Should successfully delete a beer', () => {
-    action = {
-      type: 'DELETE_BEER',
-      id: 1
-    };
-    expect(beerListReducer(currentState, action)).toEqual({
-      2: {
-        name: 'TripleDuster',
-        brand: 'Duster',
-        alcoholContent: 8,
-        price: 5,
-        quantity: 10,
-        id: 2
-      }
+    const testAction = deleteBeer(beerInfo.id);
+    const testState = { ...initialState, masterBeerList: testBeerArray };
+
+    expect(beerListReducer(testState, testAction)).toEqual({
+      ...initialState,
+      masterBeerList: [beerInfo2]
     });
-  })
-})
+  });
+});
